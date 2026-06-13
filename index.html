@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ironclad Recycling LLC | Industrial Cleanouts, Demolition & Machinery Rigging — Northeast</title>
+<meta name="description" content="Ironclad Recycling LLC — Professional industrial cleanouts, demolition, millwright services, machinery rigging and scrap metal. Serving Massachusetts, Rhode Island, Maine, Connecticut, New York, Vermont and New Hampshire. Call 508-769-2282 or email ironcladrecyclingllc@gmail.com.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#080808;
+  --dark:#0f0f0f;
+  --dark2:#161616;
+  --dark3:#1e1e1e;
+  --steel:#2a2a2a;
+  --steel-light:#3a3a3a;
+  --gold:#c9922a;
+  --gold-light:#e8b84b;
+  --gold-pale:rgba(201,146,42,.12);
+  --red:#8b1a1a;
+  --red-light:#b02020;
+  --white:#ffffff;
+  --grey:#9ca3af;
+  --grey-light:#d1d5db;
+  --border:rgba(255,255,255,.07);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);font-size:15px;line-height:1.65;overflow-x:hidden}
+
+/* ══ FLOAT CALL ══ */
+.float-call{
+  position:fixed;bottom:28px;right:28px;z-index:999;
+  background:var(--gold);color:var(--black);
+  padding:13px 22px;border-radius:4px;
+  font-size:14px;font-weight:700;text-decoration:none;
+  box-shadow:0 6px 28px rgba(201,146,42,.35);
+  display:flex;align-items:center;gap:8px;
+  transition:transform .2s,box-shadow .2s;
+  font-family:'Barlow Condensed',sans-serif;
+  letter-spacing:.06em;text-transform:uppercase;font-size:15px;
+}
+.float-call:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(201,146,42,.45)}
+
+/* ══ STICKY MOBILE CTA ══ */
+.sticky-mob{
+  position:fixed;bottom:0;left:0;right:0;z-index:900;
+  background:var(--gold);padding:13px 20px;
+  display:none;align-items:center;justify-content:space-between;
+  box-shadow:0 -4px 20px rgba(0,0,0,.5);
+}
+.sticky-mob span{color:var(--black);font-size:13px;font-weight:600;font-family:'Barlow Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.sticky-mob a{background:var(--black);color:var(--gold);padding:9px 20px;border-radius:3px;font-weight:700;font-size:14px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase}
+
+/* ══ TOPBAR ══ */
+.topbar{background:var(--red);color:rgba(255,255,255,.85);padding:8px 40px;font-size:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;letter-spacing:.04em;text-transform:uppercase;font-weight:600}
+.topbar a{color:white;text-decoration:none}
+@media(max-width:640px){.topbar{display:none}}
+
+/* ══ HEADER ══ */
+.header{background:rgba(8,8,8,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 24px rgba(0,0,0,.5)}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{height:52px;width:auto;object-fit:contain}
+.logo-text{display:flex;flex-direction:column}
+.logo-name{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--gold);letter-spacing:.08em;line-height:1}
+.logo-sub{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-top:2px}
+
+/* NAV */
+.nav{display:flex;align-items:center;gap:2px}
+.ni{position:relative}
+.nl{display:flex;align-items:center;gap:4px;padding:8px 13px;border-radius:3px;font-size:13px;font-weight:600;color:var(--grey-light);text-decoration:none;cursor:pointer;transition:background .15s,color .15s;background:none;border:none;font-family:'Inter',sans-serif;white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;font-size:11px}
+.nl:hover{background:rgba(255,255,255,.05);color:white}
+.nl svg{width:11px;height:11px;transition:transform .2s}
+.ni:hover .nl svg{transform:rotate(180deg)}
+.dd{position:absolute;top:calc(100%+8px);left:0;background:var(--dark2);border:1px solid var(--border);border-top:2px solid var(--gold);border-radius:0 0 6px 6px;padding:6px;min-width:220px;box-shadow:0 20px 56px rgba(0,0,0,.6);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s;z-index:300}
+.ni:hover .dd{opacity:1;visibility:visible;transform:translateY(0)}
+.dd a{display:block;padding:9px 13px;font-size:12px;color:var(--grey-light);text-decoration:none;transition:background .15s,color .15s;letter-spacing:.04em;text-transform:uppercase;font-weight:600;border-radius:3px}
+.dd a:hover{background:rgba(201,146,42,.1);color:var(--gold)}
+.dd-label{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.25);padding:8px 13px 4px;display:block}
+.nav-cta{background:var(--gold) !important;color:var(--black) !important;padding:9px 20px !important;border-radius:3px !important;font-weight:700 !important;margin-left:8px;font-family:'Barlow Condensed',sans-serif !important;font-size:13px !important;letter-spacing:.08em !important}
+.nav-cta:hover{background:var(--gold-light) !important}
+.hbg{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--gold);font-size:24px}
+
+/* ══ MOBILE MENU ══ */
+.mm{display:none;position:fixed;inset:0;background:var(--dark);z-index:600;flex-direction:column;padding:24px 28px;overflow-y:auto}
+.mm.open{display:flex}
+.mm-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px}
+.mm-close{background:none;border:none;cursor:pointer;font-size:28px;color:var(--gold)}
+.mm-link{display:block;font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--border);letter-spacing:.06em}
+.mm-link:hover{color:var(--gold)}
+.mm-foot{margin-top:auto;padding-top:28px;display:flex;flex-direction:column;gap:10px}
+.mm-foot a{display:block;text-align:center;padding:15px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-radius:3px}
+.mm-call{background:var(--gold);color:var(--black)}
+.mm-email{background:var(--steel);color:white}
+
+/* ══ HERO ══ */
+.hero{
+  min-height:95vh;
+  background:var(--black);
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  padding:80px max(32px,calc(50vw - 580px));
+}
+/* industrial grid background */
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(201,146,42,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(201,146,42,.04) 1px,transparent 1px);
+  background-size:60px 60px;
+  pointer-events:none;
+}
+/* dark vignette */
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,transparent 30%,rgba(0,0,0,.7) 100%);pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:680px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px}
+.hero-eyebrow-line{width:32px;height:2px;background:var(--gold)}
+.hero-eyebrow span{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(52px,8vw,100px);
+  line-height:.95;
+  color:var(--white);
+  letter-spacing:.03em;
+  margin-bottom:8px;
+}
+.hero h1 .gold{color:var(--gold)}
+.hero-tagline{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(16px,2.5vw,22px);
+  color:var(--grey);font-weight:400;
+  letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:28px;border-left:3px solid var(--gold);padding-left:16px;
+}
+.hero-desc{font-size:16px;color:rgba(255,255,255,.55);max-width:520px;margin-bottom:40px;line-height:1.75}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:52px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .2s;cursor:pointer;border:none;font-family:'Barlow Condensed',sans-serif;border-radius:3px}
+.btn-gold{background:var(--gold);color:var(--black)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 8px 28px rgba(201,146,42,.4)}
+.btn-outline{border:1.5px solid rgba(255,255,255,.2);color:white;background:none}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.btn-steel{background:var(--steel);color:white}
+.btn-steel:hover{background:var(--steel-light)}
+/* hero stats bar */
+.hero-stats{
+  display:flex;gap:0;
+  border:1px solid var(--border);
+  border-radius:4px;overflow:hidden;
+  max-width:560px;
+}
+.hstat{
+  flex:1;padding:16px 20px;
+  border-right:1px solid var(--border);
+  background:rgba(255,255,255,.03);
+}
+.hstat:last-child{border-right:none}
+.hstat-n{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--gold);letter-spacing:.04em;line-height:1}
+.hstat-l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:3px}
+/* hero logo watermark */
+.hero-logo-bg{
+  position:absolute;right:-60px;top:50%;transform:translateY(-50%);
+  opacity:.06;z-index:1;
+  width:600px;
+}
+
+/* ══ DIVIDER ══ */
+.gold-bar{background:var(--gold);padding:14px 0;overflow:hidden}
+.gb-inner{display:flex;animation:gbscroll 20s linear infinite;width:max-content}
+.gb-item{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);white-space:nowrap;padding:0 32px;border-right:1px solid rgba(0,0,0,.15)}
+@keyframes gbscroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ══ SECTIONS ══ */
+section{padding:100px 32px}
+.container{max-width:1200px;margin:0 auto}
+.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;font-weight:700}
+.section-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,60px);color:var(--white);line-height:1;letter-spacing:.04em;margin-bottom:16px}
+.section-p{font-size:15px;color:var(--grey);line-height:1.8;max-width:540px}
+.c{text-align:center}.section-p.c{margin:0 auto 48px}
+.section-h.c{text-align:center}
+
+/* ══ SERVICES ══ */
+.services-sec{background:var(--dark)}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:56px}
+.scard{
+  background:var(--dark2);
+  padding:44px 40px;
+  border:1px solid var(--border);
+  position:relative;overflow:hidden;
+  transition:background .2s,border-color .2s;
+  cursor:default;
+}
+.scard::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform .3s;
+}
+.scard:hover{background:var(--dark3);border-color:rgba(201,146,42,.2)}
+.scard:hover::before{transform:scaleX(1)}
+.scard-num{
+  font-family:'Bebas Neue',sans-serif;font-size:60px;
+  color:rgba(255,255,255,.04);position:absolute;top:16px;right:24px;
+  line-height:1;letter-spacing:.04em;
+}
+.scard-icon{font-size:32px;margin-bottom:20px;display:block}
+.scard-title{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);letter-spacing:.04em;margin-bottom:12px;line-height:1.1}
+.scard-desc{font-size:14px;color:var(--grey);line-height:1.75}
+.scard-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.stag{font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--gold);background:var(--gold-pale);padding:3px 10px;border-radius:2px;border:1px solid rgba(201,146,42,.2)}
+
+/* ══ WHY IRONCLAD ══ */
+.why-sec{background:var(--black);position:relative;overflow:hidden}
+.why-sec::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,146,42,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,146,42,.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+.why-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.why-points{display:flex;flex-direction:column;gap:28px;margin-top:36px}
+.wp{display:flex;gap:20px;align-items:flex-start}
+.wp-icon{width:48px;height:48px;background:var(--gold-pale);border:1px solid rgba(201,146,42,.2);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.wp-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--white);letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
+.wp-desc{font-size:13px;color:var(--grey);line-height:1.65}
+/* right side — stat blocks */
+.why-stats{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.wstat{background:var(--dark2);border:1px solid var(--border);padding:32px 28px;position:relative}
+.wstat::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);opacity:.4}
+.wstat-n{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--gold);line-height:1;letter-spacing:.04em}
+.wstat-l{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-top:6px;line-height:1.4}
+
+/* ══ SERVICE AREA ══ */
+.area-sec{background:var(--dark)}
+.area-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:56px}
+.states-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.state-card{
+  background:var(--dark2);border:1px solid var(--border);
+  border-radius:4px;padding:20px 22px;
+  display:flex;align-items:center;gap:14px;
+  transition:border-color .2s,background .2s;
+}
+.state-card:hover{border-color:rgba(201,146,42,.3);background:var(--dark3)}
+.state-flag{font-size:28px}
+.state-name{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--white);letter-spacing:.04em;text-transform:uppercase}
+.state-sub{font-size:11px;color:var(--grey);margin-top:1px}
+.area-text .section-p{margin-bottom:28px}
+.area-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--gold-pale);border:1px solid rgba(201,146,42,.25);
+  padding:12px 20px;border-radius:4px;margin-top:8px;
+}
+.area-badge span{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
+
+/* ══ QUOTE FORM ══ */
+.quote-sec{background:var(--black);position:relative;overflow:hidden}
+.quote-sec::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,146,42,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,146,42,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.quote-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;position:relative;z-index:1}
+.quote-info{padding-top:8px}
+.quote-info .section-p{margin-bottom:32px}
+.contact-items{display:flex;flex-direction:column;gap:16px}
+.ci{display:flex;align-items:center;gap:14px}
+.ci-icon{width:44px;height:44px;background:var(--gold-pale);border:1px solid rgba(201,146,42,.2);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.ci-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-bottom:2px}
+.ci-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--white);letter-spacing:.04em}
+.ci-val a{color:var(--gold);text-decoration:none}
+.ci-val a:hover{text-decoration:underline}
+/* form */
+.qform{background:var(--dark2);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:0 0 6px 6px;padding:36px}
+.qform-title{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);letter-spacing:.06em;margin-bottom:24px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.form-group label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);font-weight:600}
+.form-group input,.form-group select,.form-group textarea{
+  background:var(--dark3);border:1px solid var(--border);
+  border-radius:3px;padding:12px 14px;
+  color:var(--white);font-family:'Inter',sans-serif;font-size:14px;
+  transition:border-color .2s;outline:none;width:100%;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group select option{background:var(--dark2);color:var(--white)}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-submit{
+  width:100%;background:var(--gold);color:var(--black);
+  padding:15px;border:none;border-radius:3px;cursor:pointer;
+  font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  transition:background .2s,transform .1s;margin-top:8px;
+}
+.form-submit:hover{background:var(--gold-light);transform:translateY(-1px)}
+.form-note{font-size:11px;color:var(--grey);text-align:center;margin-top:10px}
+
+/* ══ CTA BANNER ══ */
+.cta-sec{background:var(--gold);padding:100px 32px;text-align:center;position:relative;overflow:hidden}
+.cta-sec::before{
+  content:'IRONCLAD';
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(80px,18vw,220px);
+  color:rgba(0,0,0,.07);letter-spacing:.04em;
+  white-space:nowrap;pointer-events:none;line-height:1;
+}
+.cta-inner{max-width:640px;margin:0 auto;position:relative;z-index:1}
+.cta-sec .eyebrow{color:rgba(0,0,0,.5)}
+.cta-sec .section-h{color:var(--black)}
+.cta-sec .section-p{color:rgba(0,0,0,.6);margin:0 auto 36px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ══ FOOTER ══ */
+footer{background:var(--dark);border-top:1px solid var(--border);padding:60px 32px 24px}
+.footer-in{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
+.f-logo{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.f-logo img{height:50px;width:auto;object-fit:contain}
+.f-brand p{font-size:13px;color:var(--grey);line-height:1.75}
+.f-col h4{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:14px;font-weight:700}
+.f-col a{display:block;font-size:13px;color:var(--grey);text-decoration:none;margin-bottom:8px;transition:color .2s}
+.f-col a:hover{color:var(--gold)}
+.footer-bot{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12px;color:rgba(255,255,255,.25)}
+.footer-bot span{display:flex;align-items:center;gap:6px}
+
+/* ══ REVEAL ══ */
+.rev{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.rev.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:1024px){
+  .services-grid{grid-template-columns:1fr}
+  .why-wrap,.area-wrap,.quote-wrap{grid-template-columns:1fr;gap:44px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media(max-width:768px){
+  .nav{display:none}
+  .hbg{display:block}
+  section{padding:64px 20px}
+  .hero{padding:64px 20px;min-height:auto}
+  .hero-stats{flex-direction:column;max-width:100%}
+  .hstat{border-right:none;border-bottom:1px solid var(--border)}
+  .hstat:last-child{border-bottom:none}
+  .why-stats{grid-template-columns:1fr 1fr}
+  .states-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .float-call{display:none}
+  .sticky-mob{display:flex}
+  .hero-logo-bg{display:none}
+  .cta-sec{padding:72px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- STICKY MOBILE -->
+<div class="sticky-mob">
+  <span>Ironclad Recycling LLC</span>
+  <a href="tel:5087692282">📞 Call Now</a>
+</div>
+
+<!-- FLOAT CALL -->
+<a href="tel:5087692282" class="float-call">📞 508-769-2282</a>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>⚠️ Licensed & Insured — Serving the Northeast</span>
+  <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+    <span>MA · RI · ME · CT · NY · VT · NH</span>
+    <a href="mailto:ironcladrecyclingllc@gmail.com">ironcladrecyclingllc@gmail.com</a>
+    <a href="tel:5087692282">508-769-2282</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="ironclad-logo.jpg" alt="Ironclad Recycling LLC">
+      <div class="logo-text">
+        <span class="logo-name">Ironclad Recycling</span>
+        <span class="logo-sub">LLC · Northeast Industrial Services</span>
+      </div>
+    </a>
+    <nav class="nav">
+      <div class="ni">
+        <button class="nl">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dd">
+          <span class="dd-label">What We Do</span>
+          <a href="#services">🏚️ Household Cleanouts</a>
+          <a href="#services">🏭 Industrial Cleanouts</a>
+          <a href="#services">⚙️ Millwright Services</a>
+          <a href="#services">🔩 Machinery Rigging</a>
+          <a href="#services">♻️ Scrap Metal</a>
+        </div>
+      </div>
+      <div class="ni"><a href="#why" class="nl">Why Ironclad</a></div>
+      <div class="ni"><a href="#area" class="nl">Service Area</a></div>
+      <div class="ni"><a href="#quote" class="nl">Get a Quote</a></div>
+      <a href="tel:5087692282" class="nl nav-cta">📞 508-769-2282</a>
+    </nav>
+    <button class="hbg" onclick="toggleMM()">☰</button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mm" id="mm">
+  <div class="mm-top">
+    <img src="ironclad-logo.jpg" alt="Ironclad" style="height:48px;object-fit:contain">
+    <button class="mm-close" onclick="toggleMM()">✕</button>
+  </div>
+  <a href="#services" class="mm-link" onclick="toggleMM()">Services</a>
+  <a href="#why" class="mm-link" onclick="toggleMM()">Why Ironclad</a>
+  <a href="#area" class="mm-link" onclick="toggleMM()">Service Area</a>
+  <a href="#quote" class="mm-link" onclick="toggleMM()">Get a Quote</a>
+  <div class="mm-foot">
+    <a href="tel:5087692282" class="mm-call">📞 508-769-2282</a>
+    <a href="mailto:ironcladrecyclingllc@gmail.com" class="mm-email">✉️ Email Us</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="ironclad-logo.jpg" alt="" class="hero-logo-bg" aria-hidden="true">
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span>Northeast Industrial Services</span>
+    </div>
+    <h1>WE HAUL<br>THE <span class="gold">HEAVY</span><br>STUFF.</h1>
+    <p class="hero-tagline">Industrial Cleanouts · Demolition · Machinery Rigging · Scrap Metal</p>
+    <p class="hero-desc">From household cleanouts to full industrial facility teardowns — Ironclad Recycling handles the jobs other companies won't touch. Licensed, insured, and built for the Northeast.</p>
+    <div class="hero-btns">
+      <a href="#quote" class="btn btn-gold">Get a Free Quote</a>
+      <a href="#services" class="btn btn-outline">Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-n">7</div>
+        <div class="hstat-l">States Served</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-n">LLC</div>
+        <div class="hstat-l">Licensed & Insured</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-n">24/7</div>
+        <div class="hstat-l">Emergency Response</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-n">$0</div>
+        <div class="hstat-l">Upfront Cost to Quote</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOLD DIVIDER -->
+<div class="gold-bar" aria-hidden="true">
+  <div class="gb-inner">
+    <span class="gb-item">🏭 Industrial Cleanouts</span>
+    <span class="gb-item">🔩 Machinery Rigging</span>
+    <span class="gb-item">⚙️ Millwright Services</span>
+    <span class="gb-item">♻️ Scrap Metal Recycling</span>
+    <span class="gb-item">🏚️ Household Cleanouts</span>
+    <span class="gb-item">💥 Demolition</span>
+    <span class="gb-item">🚛 Northeast USA</span>
+    <span class="gb-item">🏭 Industrial Cleanouts</span>
+    <span class="gb-item">🔩 Machinery Rigging</span>
+    <span class="gb-item">⚙️ Millwright Services</span>
+    <span class="gb-item">♻️ Scrap Metal Recycling</span>
+    <span class="gb-item">🏚️ Household Cleanouts</span>
+    <span class="gb-item">💥 Demolition</span>
+    <span class="gb-item">🚛 Northeast USA</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-sec" id="services">
+  <div class="container">
+    <div class="rev">
+      <span class="eyebrow">What We Do</span>
+      <h2 class="section-h">Our Services</h2>
+      <p class="section-p">Every job is quoted on-site. No hidden fees. No surprises. Just straight talk and serious work.</p>
+    </div>
+    <div class="services-grid rev d1">
+      <div class="scard">
+        <div class="scard-num">01</div>
+        <span class="scard-icon">🏚️</span>
+        <div class="scard-title">Household Cleanouts & Demolition</div>
+        <p class="scard-desc">Full residential cleanouts from attic to basement. Estate cleanouts, hoarding situations, garage cleanouts, and interior demolition. We remove everything and leave it broom clean.</p>
+        <div class="scard-tags">
+          <span class="stag">Estate Cleanouts</span>
+          <span class="stag">Garage Cleanouts</span>
+          <span class="stag">Interior Demo</span>
+          <span class="stag">Full Removal</span>
+        </div>
+      </div>
+      <div class="scard">
+        <div class="scard-num">02</div>
+        <span class="scard-icon">🏭</span>
+        <div class="scard-title">Industrial Cleanouts & Demolition</div>
+        <p class="scard-desc">Commercial and industrial facility cleanouts at any scale. Warehouse teardowns, manufacturing plant decommissioning, factory floor clearances, and structural demolition. Built for the big jobs.</p>
+        <div class="scard-tags">
+          <span class="stag">Warehouse Cleanouts</span>
+          <span class="stag">Factory Decommission</span>
+          <span class="stag">Structural Demo</span>
+          <span class="stag">Commercial Scale</span>
+        </div>
+      </div>
+      <div class="scard">
+        <div class="scard-num">03</div>
+        <span class="scard-icon">⚙️</span>
+        <div class="scard-title">Millwright Services</div>
+        <p class="scard-desc">Professional millwright work for industrial equipment installation, alignment, and removal. Precision mechanical work for manufacturing facilities, power plants, and heavy industry across the Northeast.</p>
+        <div class="scard-tags">
+          <span class="stag">Equipment Installation</span>
+          <span class="stag">Precision Alignment</span>
+          <span class="stag">Industrial Removal</span>
+          <span class="stag">Heavy Industry</span>
+        </div>
+      </div>
+      <div class="scard">
+        <div class="scard-num">04</div>
+        <span class="scard-icon">🔩</span>
+        <div class="scard-title">Machinery Rigging & Scrap Metal</div>
+        <p class="scard-desc">Safe and efficient rigging of heavy machinery for relocation, removal, or disposal. We handle the heavy iron others walk away from — and we recycle and process scrap metal responsibly.</p>
+        <div class="scard-tags">
+          <span class="stag">Heavy Rigging</span>
+          <span class="stag">Machine Relocation</span>
+          <span class="stag">Scrap Processing</span>
+          <span class="stag">Responsible Recycling</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px" class="rev">
+      <p style="color:var(--grey);font-size:15px;margin-bottom:20px">All jobs are priced on evaluation. Contact us for a free on-site quote.</p>
+      <a href="#quote" class="btn btn-gold">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IRONCLAD -->
+<section class="why-sec" id="why">
+  <div class="container">
+    <div class="why-wrap">
+      <div class="rev">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2 class="section-h">Built Different.<br>Built Ironclad.</h2>
+        <p class="section-p" style="margin-bottom:0">We take on the projects that require real expertise, real equipment, and real accountability. When the job is too big, too heavy, or too complex — that's where we thrive.</p>
+        <div class="why-points">
+          <div class="wp">
+            <div class="wp-icon">🛡️</div>
+            <div>
+              <div class="wp-title">Licensed & Fully Insured</div>
+              <p class="wp-desc">Every job is covered. You're protected from day one, and we carry full liability and commercial coverage for industrial work.</p>
+            </div>
+          </div>
+          <div class="wp">
+            <div class="wp-icon">🗺️</div>
+            <div>
+              <div class="wp-title">Northeast Coverage</div>
+              <p class="wp-desc">Based in Massachusetts and mobilizing across Rhode Island, Maine, Connecticut, New York, Vermont, and New Hampshire — one company, the whole region.</p>
+            </div>
+          </div>
+          <div class="wp">
+            <div class="wp-icon">⚖️</div>
+            <div>
+              <div class="wp-title">Straight Pricing. No Surprises.</div>
+              <p class="wp-desc">Every job is quoted on-site after evaluation. What we quote is what you pay. No hidden fees, no last-minute add-ons.</p>
+            </div>
+          </div>
+          <div class="wp">
+            <div class="wp-icon">♻️</div>
+            <div>
+              <div class="wp-title">Responsible Recycling</div>
+              <p class="wp-desc">We don't just haul — we recycle. Scrap metal, materials, and debris are processed and recycled responsibly wherever possible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-stats rev d2">
+        <div class="wstat">
+          <div class="wstat-n">7</div>
+          <div class="wstat-l">Northeast States<br>Covered</div>
+        </div>
+        <div class="wstat">
+          <div class="wstat-n">LLC</div>
+          <div class="wstat-l">Fully Licensed<br>& Insured</div>
+        </div>
+        <div class="wstat">
+          <div class="wstat-n">4</div>
+          <div class="wstat-l">Core Service<br>Specialties</div>
+        </div>
+        <div class="wstat">
+          <div class="wstat-n">$0</div>
+          <div class="wstat-l">Cost to Get<br>a Quote</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area-sec" id="area">
+  <div class="container">
+    <div class="area-wrap">
+      <div class="rev">
+        <span class="eyebrow">Where We Work</span>
+        <h2 class="section-h">Serving the Northeast</h2>
+        <p class="section-p">One call covers the whole region. We mobilize across seven states for residential, commercial, and industrial projects of any size.</p>
+        <div class="area-badge">
+          <span>📞 508-769-2282</span>
+        </div>
+        <p style="font-size:13px;color:var(--grey);margin-top:16px">Not sure if we cover your area? Call us — if we can get there, we will.</p>
+        <div style="margin-top:28px">
+          <a href="#quote" class="btn btn-gold">Get a Free Quote</a>
+        </div>
+      </div>
+      <div class="states-grid rev d1">
+        <div class="state-card">
+          <span class="state-flag">🦞</span>
+          <div>
+            <div class="state-name">Massachusetts</div>
+            <div class="state-sub">Full state coverage</div>
+          </div>
+        </div>
+        <div class="state-card">
+          <span class="state-flag">⚓</span>
+          <div>
+            <div class="state-name">Rhode Island</div>
+            <div class="state-sub">Full state coverage</div>
+          </div>
+        </div>
+        <div class="state-card">
+          <span class="state-flag">🌲</span>
+          <div>
+            <div class="state-name">Maine</div>
+            <div class="state-sub">Full state coverage</div>
+          </div>
+        </div>
+        <div class="state-card">
+          <span class="state-flag">🌳</span>
+          <div>
+            <div class="state-name">Connecticut</div>
+            <div class="state-sub">Full state coverage</div>
+          </div>
+        </div>
+        <div class="state-card">
+          <span class="state-flag">🗽</span>
+          <div>
+            <div class="state-name">New York</div>
+            <div class="state-sub">Full state coverage</div>
+          </div>
+        </div>
+        <div class="state-card">
+          <span class="state-flag">🍁</span>
+          <div>
+            <div class="state-name">Vermont</div>
+            <div class="state-sub">Full state coverage</div>
+          </div>
+        </div>
+        <div class="state-card" style="grid-column:span 2">
+          <span class="state-flag">⛰️</span>
+          <div>
+            <div class="state-name">New Hampshire</div>
+            <div class="state-sub">Full state coverage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section class="quote-sec" id="quote">
+  <div class="container">
+    <div class="quote-wrap">
+      <div class="quote-info rev">
+        <span class="eyebrow">Free Evaluation</span>
+        <h2 class="section-h">Get a Quote</h2>
+        <p class="section-p">All pricing is job-dependent and requires an on-site evaluation. Fill out the form and we'll be in touch within 24 hours to schedule your free assessment.</p>
+        <div class="contact-items">
+          <div class="ci">
+            <div class="ci-icon">📞</div>
+            <div>
+              <div class="ci-label">Phone</div>
+              <div class="ci-val"><a href="tel:5087692282">508-769-2282</a></div>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">✉️</div>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-val"><a href="mailto:ironcladrecyclingllc@gmail.com">ironcladrecyclingllc@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">🗺️</div>
+            <div>
+              <div class="ci-label">Service Area</div>
+              <div class="ci-val" style="font-size:14px;color:var(--grey)">MA · RI · ME · CT · NY · VT · NH</div>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">⚡</div>
+            <div>
+              <div class="ci-label">Response Time</div>
+              <div class="ci-val" style="font-size:14px;color:var(--grey)">Within 24 hours</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rev d1">
+        <form class="qform" id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
+          <div class="qform-title">Request a Free Quote</div>
+
+          <!-- Web3Forms config: PASTE YOUR ACCESS KEY BELOW -->
+          <input type="hidden" name="access_key" value="c89941c0-8929-4cd9-8733-2366c16bb9ac">
+          <input type="hidden" name="subject" value="New Quote Request — Ironclad Recycling LLC">
+          <input type="hidden" name="from_name" value="Ironclad Recycling Website">
+          <!-- honeypot spam filter (leave empty / hidden) -->
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" name="First Name" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" name="Last Name" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" name="Phone" placeholder="508-555-0100" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="Email" placeholder="john@company.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service Type *</label>
+            <select name="Service Type" required>
+              <option value="" disabled selected>Select a service...</option>
+              <option>Household Cleanout</option>
+              <option>Household Demolition</option>
+              <option>Industrial Cleanout</option>
+              <option>Industrial Demolition</option>
+              <option>Millwright Services</option>
+              <option>Machinery Rigging</option>
+              <option>Scrap Metal Removal</option>
+              <option>Multiple Services / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>State</label>
+              <select name="State">
+                <option value="" disabled selected>Select state...</option>
+                <option>Massachusetts</option>
+                <option>Rhode Island</option>
+                <option>Maine</option>
+                <option>Connecticut</option>
+                <option>New York</option>
+                <option>Vermont</option>
+                <option>New Hampshire</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>City / Town</label>
+              <input type="text" name="City" placeholder="e.g. Worcester">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Job Description</label>
+            <textarea name="Job Description" placeholder="Briefly describe the job — size of space, type of materials, any special equipment or access requirements..."></textarea>
+          </div>
+          <button class="form-submit" type="submit">Submit Quote Request →</button>
+          <p class="form-note" id="formNote">We'll contact you within 24 hours to schedule your free on-site evaluation.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <div class="cta-inner rev">
+    <span class="eyebrow">Ready to Get Started?</span>
+    <h2 class="section-h">We Handle the<br>Heavy Lifting.</h2>
+    <p class="section-p c">One call gets you a free on-site evaluation. No commitment, no pressure — just a straight quote from a team that knows how to get the job done.</p>
+    <div class="cta-btns">
+      <a href="tel:5087692282" class="btn btn-steel">📞 508-769-2282</a>
+      <a href="#quote" class="btn btn-outline" style="border-color:rgba(0,0,0,.25);color:var(--black)">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-in">
+    <div class="footer-top">
+      <div class="f-brand">
+        <div class="f-logo"><img src="ironclad-logo.jpg" alt="Ironclad Recycling LLC"></div>
+        <p>Professional industrial cleanouts, demolition, millwright services, machinery rigging, and scrap metal recycling. Serving Massachusetts, Rhode Island, Maine, Connecticut, New York, Vermont, and New Hampshire.</p>
+      </div>
+      <div class="f-col">
+        <h4>Services</h4>
+        <a href="#services">Household Cleanouts</a>
+        <a href="#services">Industrial Cleanouts</a>
+        <a href="#services">Millwright Services</a>
+        <a href="#services">Machinery Rigging</a>
+        <a href="#services">Scrap Metal</a>
+      </div>
+      <div class="f-col">
+        <h4>Company</h4>
+        <a href="#why">Why Ironclad</a>
+        <a href="#area">Service Area</a>
+        <a href="#quote">Get a Quote</a>
+      </div>
+      <div class="f-col">
+        <h4>Contact</h4>
+        <a href="tel:5087692282">508-769-2282</a>
+        <a href="mailto:ironcladrecyclingllc@gmail.com">ironcladrecyclingllc@gmail.com</a>
+        <a href="#quote">Request a Quote</a>
+        <a href="#area">MA · RI · ME · CT · NY · VT · NH</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© 2026 Ironclad Recycling LLC · All Rights Reserved</span>
+      <span>Licensed & Insured · Serving the Northeast</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMM(){
+  const m=document.getElementById('mm');
+  m.classList.toggle('open');
+  document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+}
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')})
+},{threshold:0.07});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+window.addEventListener('resize',()=>{
+  if(window.innerWidth>768){document.getElementById('mm').classList.remove('open');document.body.style.overflow=''}
+});
+
+/* ══ QUOTE FORM SUBMISSION (Web3Forms) ══ */
+const quoteForm=document.getElementById('quoteForm');
+if(quoteForm){
+  const note=document.getElementById('formNote');
+  const btn=quoteForm.querySelector('.form-submit');
+  quoteForm.addEventListener('submit',async function(e){
+    e.preventDefault();
+    const btnText=btn.textContent;
+    btn.disabled=true;btn.textContent='Sending…';
+    note.style.color='var(--grey)';note.textContent='Sending your request…';
+    try{
+      const res=await fetch('https://api.web3forms.com/submit',{
+        method:'POST',
+        headers:{'Accept':'application/json'},
+        body:new FormData(quoteForm)
+      });
+      const data=await res.json();
+      if(data.success){
+        quoteForm.reset();
+        btn.textContent='✓ Request Sent';
+        note.style.color='var(--gold)';
+        note.textContent='Thanks! Your request was sent. We\'ll be in touch within 24 hours.';
+      }else{
+        throw new Error(data.message||'Submission failed');
+      }
+    }catch(err){
+      btn.disabled=false;btn.textContent=btnText;
+      note.style.color='#e57373';
+      note.textContent='Something went wrong. Please call us at 508-769-2282 or email ironcladrecyclingllc@gmail.com.';
+    }
+  });
+}
+</script>
+</body>
+</html>
