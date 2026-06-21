@@ -360,7 +360,14 @@
         </div>
       </div>
       <div class="rev d1">
-        <form name="quote" method="POST" data-netlify="true" class="qform">
+        <form action="https://api.web3forms.com/submit" method="POST" class="qform" id="quote-form">
+          <input type="hidden" name="access_key" value="c89941c0-8929-4cd9-8733-2366c16bb9ac">
+          <input type="hidden" name="subject" value="New Quote Request — Ironclad Recycling">
+          <input type="hidden" name="redirect" value="false">
+          <div id="form-success" style="display:none;background:rgba(201,146,42,.12);border:1px solid var(--gold);border-radius:4px;padding:20px;text-align:center;margin-bottom:16px">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--gold);letter-spacing:.06em;margin-bottom:6px">Request Sent!</div>
+            <p style="font-size:14px;color:var(--grey);margin:0">We'll be in touch within 24 hours to schedule your free assessment.</p>
+          </div>
           <div class="qform-title">Request a Free Quote</div>
           <div class="form-row">
             <div class="form-group">
