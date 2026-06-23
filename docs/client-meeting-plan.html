@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ironclad Recycling — Project Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --black:#080808;--dark:#0f0f0f;--dark2:#161616;--dark3:#1e1e1e;
+    --steel:#2a2a2a;--gold:#c9922a;--gold-light:#e8b84b;
+    --gold-pale:rgba(201,146,42,.12);--red:#8b1a1a;--green:#2e7d32;
+    --white:#fff;--grey:#9ca3af;--grey-light:#d1d5db;--border:rgba(255,255,255,.08);
+  }
+  body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.65;padding:0 0 80px}
+  .wrap{max-width:880px;margin:0 auto;padding:0 32px}
+
+  /* HEADER */
+  .head{background:var(--dark);border-bottom:2px solid var(--gold);padding:48px 0 40px;margin-bottom:48px}
+  .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .eyebrow::before{content:'';width:32px;height:2px;background:var(--gold)}
+  h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,7vw,68px);letter-spacing:.03em;line-height:.98;margin-bottom:10px}
+  h1 .gold{color:var(--gold)}
+  .sub{font-family:'Barlow Condensed',sans-serif;font-size:18px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);border-left:3px solid var(--gold);padding-left:14px}
+
+  /* SECTIONS */
+  .sec{margin-bottom:44px}
+  .sec-label{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:.04em;margin-bottom:6px;display:flex;align-items:center;gap:14px}
+  .sec-num{font-size:14px;color:var(--gold);border:1px solid var(--gold);border-radius:50%;width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;flex-shrink:0}
+  .sec-intro{font-size:14px;color:var(--grey);margin:0 0 20px 44px;max-width:620px}
+
+  /* CARDS / ROWS */
+  .row{display:flex;gap:16px;align-items:flex-start;background:var(--dark2);border:1px solid var(--border);border-radius:6px;padding:18px 22px;margin-bottom:10px;margin-left:44px}
+  .row.done{border-left:3px solid var(--green)}
+  .row.todo{border-left:3px solid var(--gold)}
+  .row.after{border-left:3px solid var(--steel)}
+  .check{font-size:20px;flex-shrink:0;line-height:1.4}
+  .row-body h3{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;margin-bottom:3px}
+  .row-body p{font-size:13px;color:var(--grey);line-height:1.6}
+  .row-body .cost{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);background:var(--gold-pale);border:1px solid rgba(201,146,42,.25);padding:2px 10px;border-radius:3px;margin-top:8px}
+
+  /* COST BOX */
+  .cost-box{background:var(--dark2);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:6px;padding:28px 32px;margin-left:44px}
+  .cost-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border)}
+  .cost-row:last-child{border-bottom:none;padding-top:16px}
+  .cost-row .label{font-size:14px;color:var(--grey-light)}
+  .cost-row .label small{display:block;font-size:12px;color:var(--grey);margin-top:2px}
+  .cost-row .amt{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;color:var(--white)}
+  .cost-row.total .label{font-weight:600;color:var(--white);font-size:15px;text-transform:uppercase;letter-spacing:.04em;font-family:'Barlow Condensed',sans-serif}
+  .cost-row.total .amt{color:var(--gold);font-size:26px}
+
+  /* LINK BAR */
+  .live-bar{background:var(--gold-pale);border:1px solid rgba(201,146,42,.3);border-radius:6px;padding:18px 24px;margin-bottom:48px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .live-dot{width:10px;height:10px;background:var(--green);border-radius:50%;box-shadow:0 0 0 4px rgba(46,125,50,.2)}
+  .live-bar .txt{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .live-bar a{color:var(--gold);font-weight:600;text-decoration:none;font-size:14px}
+  .live-bar a:hover{text-decoration:underline}
+
+  .foot{margin-top:56px;padding-top:24px;border-top:1px solid var(--border);font-size:12px;color:var(--grey);text-align:center;letter-spacing:.04em}
+
+  @media print{
+    body{background:#fff;color:#000}
+    .head{background:#f4f4f4}
+    .row,.cost-box,.live-bar{background:#fafafa;border-color:#ddd}
+    h1,.sec-label{color:#000}
+  }
+  @media(max-width:640px){
+    .sec-intro,.row,.cost-box{margin-left:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div class="wrap">
+    <div class="eyebrow">Project Plan · Prepared for Ironclad Recycling LLC</div>
+    <h1>Website <span class="gold">Launch Plan</span></h1>
+    <p class="sub">What's done · What we do today · What comes next</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="live-bar">
+    <span class="live-dot"></span>
+    <span class="txt">The site is built &amp; already live for preview at:</span>
+    <a href="https://ironclad-recycling.netlify.app" target="_blank">ironclad-recycling.netlify.app</a>
+  </div>
+
+  <!-- SECTION 1: DONE -->
+  <div class="sec">
+    <div class="sec-label"><span class="sec-num">1</span> Already Complete</div>
+    <p class="sec-intro">The full website is built, tested, and working. Here's what's ready to go.</p>
+
+    <div class="row done">
+      <span class="check">✅</span>
+      <div class="row-body">
+        <h3>Full Website Built</h3>
+        <p>Homepage with services, service area, "why us" section, and contact details. Designed to match the Ironclad brand — bold, industrial, professional.</p>
+      </div>
+    </div>
+    <div class="row done">
+      <span class="check">✅</span>
+      <div class="row-body">
+        <h3>Quote Request Form — Working</h3>
+        <p>Customers fill out the form and the request is emailed directly to you. Tested and confirmed working.</p>
+      </div>
+    </div>
+    <div class="row done">
+      <span class="check">✅</span>
+      <div class="row-body">
+        <h3>Mobile-Friendly</h3>
+        <p>Works on phones, tablets, and desktop. Tap-to-call on mobile so customers can dial you in one tap.</p>
+      </div>
+    </div>
+    <div class="row done">
+      <span class="check">✅</span>
+      <div class="row-body">
+        <h3>Legal Pages</h3>
+        <p>Privacy Policy and Terms of Service written and linked — required since the site collects contact info. Includes the Mill Rights notice.</p>
+      </div>
+    </div>
+    <div class="row done">
+      <span class="check">✅</span>
+      <div class="row-body">
+        <h3>Fast &amp; Optimized</h3>
+        <p>Built clean and lightweight so it loads fast — which helps with Google rankings.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: TODAY -->
+  <div class="sec">
+    <div class="sec-label"><span class="sec-num">2</span> What We Do Together Today</div>
+    <p class="sec-intro">Two quick steps to get the site on a real web address. Takes about 30 minutes. You'll create the accounts in your name — you own everything.</p>
+
+    <div class="row todo">
+      <span class="check">1️⃣</span>
+      <div class="row-body">
+        <h3>Buy the Domain</h3>
+        <p>We register your web address together (we'll pick the exact name at the meeting) on Namecheap. You pay with your card, account stays in your name.</p>
+        <span class="cost">~$9 / year</span>
+      </div>
+    </div>
+    <div class="row todo">
+      <span class="check">2️⃣</span>
+      <div class="row-body">
+        <h3>Connect &amp; Go Live</h3>
+        <p>I connect the domain to the hosting and turn on the security lock (https). Within a few hours the site is live at your real web address — no monthly hosting fee.</p>
+        <span class="cost">Hosting — Free</span>
+      </div>
+    </div>
+    <div class="row todo">
+      <span class="check">📧</span>
+      <div class="row-body">
+        <h3>Confirm Your Quote Email</h3>
+        <p>We make sure quote requests land in the inbox you check most. I just need to confirm which email that is.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- COST SUMMARY -->
+  <div class="sec">
+    <div class="sec-label"><span class="sec-num">$</span> What It Costs to Run</div>
+    <p class="sec-intro">Honest, no-surprises breakdown. These are the only ongoing costs.</p>
+    <div class="cost-box">
+      <div class="cost-row">
+        <span class="label">Domain name<small>Your web address — renews yearly</small></span>
+        <span class="amt">~$9 / yr</span>
+      </div>
+      <div class="cost-row">
+        <span class="label">Website hosting<small>Free tier — no monthly fee</small></span>
+        <span class="amt">$0</span>
+      </div>
+      <div class="cost-row">
+        <span class="label">Quote form<small>Free tier — handles your submissions</small></span>
+        <span class="amt">$0</span>
+      </div>
+      <div class="cost-row total">
+        <span class="label">Total to go live today</span>
+        <span class="amt">~$9</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: AFTER -->
+  <div class="sec">
+    <div class="sec-label"><span class="sec-num">3</span> After Launch — When You're Ready</div>
+    <p class="sec-intro">Not needed today, but here's how the site grows over time.</p>
+
+    <div class="row after">
+      <span class="check">📸</span>
+      <div class="row-body">
+        <h3>Add Real Photos</h3>
+        <p>When you're ready, send real job photos — truck, crew, before/afters — and I'll add them. Real photos win more customers than stock images.</p>
+      </div>
+    </div>
+    <div class="row after">
+      <span class="check">🔍</span>
+      <div class="row-body">
+        <h3>Get Found on Google</h3>
+        <p>Set up Google Business Profile and Search Console so you show up when people search "demolition" or "cleanout" in your area.</p>
+      </div>
+    </div>
+    <div class="row after">
+      <span class="check">📊</span>
+      <div class="row-body">
+        <h3>Track Visitors</h3>
+        <p>Add free analytics so you can see how many people visit and where they come from.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    Ironclad Recycling LLC · Industrial Cleanouts · Demolition · Machinery Rigging<br>
+    Serving Maine · Vermont · New Hampshire · Massachusetts · Connecticut
+  </div>
+
+</div>
+</body>
+</html>
