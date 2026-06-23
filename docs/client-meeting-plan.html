@@ -33,6 +33,9 @@
 
   /* CARDS / ROWS */
   .row{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:6px;padding:18px 22px;margin-bottom:10px;margin-left:44px;box-shadow:0 1px 3px rgba(31,39,51,.04)}
+  a.row{text-decoration:none;color:inherit;transition:transform .12s,box-shadow .12s,border-color .12s;position:relative}
+  a.row:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(43,74,111,.12);border-color:#cfdcec}
+  a.row .go{position:absolute;top:16px;right:18px;font-size:13px;font-weight:700;color:var(--slate-light);letter-spacing:.04em;text-transform:uppercase;font-family:'Barlow Condensed',sans-serif}
   .row.done{border-left:3px solid var(--green)}
   .row.todo{border-left:3px solid var(--slate-light)}
   .row.after{border-left:3px solid #b6c0cd}
@@ -135,22 +138,24 @@
     <div class="sec-label"><span class="sec-num">2</span> What We Do Together Today</div>
     <p class="sec-intro">Two quick steps to get the site on a real web address. Takes about 30 minutes. You'll create the accounts in your name — you own everything.</p>
 
-    <div class="row todo">
+    <a class="row todo" href="https://www.namecheap.com" target="_blank" rel="noopener">
+      <span class="go">Open ↗</span>
       <span class="check">1️⃣</span>
       <div class="row-body">
         <h3>Buy the Domain</h3>
         <p>We register your web address together (we'll pick the exact name at the meeting) on Namecheap. You pay with your card, account stays in your name.</p>
         <span class="cost">~$9 / year</span>
       </div>
-    </div>
-    <div class="row todo">
+    </a>
+    <a class="row todo" href="https://www.netlify.com" target="_blank" rel="noopener">
+      <span class="go">Open ↗</span>
       <span class="check">2️⃣</span>
       <div class="row-body">
         <h3>Connect &amp; Go Live</h3>
         <p>I connect the domain to the hosting and turn on the security lock (https). Within a few hours the site is live at your real web address — no monthly hosting fee.</p>
         <span class="cost">Hosting — Free</span>
       </div>
-    </div>
+    </a>
     <div class="row todo">
       <span class="check">📧</span>
       <div class="row-body">
