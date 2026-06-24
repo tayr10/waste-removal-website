@@ -85,8 +85,8 @@
       <span>Northeast Industrial Services</span>
     </div>
     <h1>WE HAUL<br>THE <span class="gold">HEAVY</span><br>STUFF.</h1>
-    <p class="hero-tagline">Industrial Cleanouts · Demolition · Machinery Rigging · Scrap Metal</p>
-    <p class="hero-desc">From household cleanouts to full industrial facility teardowns — Ironclad Recycling handles the jobs other companies won't touch. Licensed, insured, and built for the Northeast.</p>
+    <p class="hero-tagline">Industrial Cleanouts · Demolition · Machinery Rigging · Scrap Metal · Roll-Off Services</p>
+    <p class="hero-desc">From household cleanouts to full industrial facility teardowns — plus roll-off container service for any job — Ironclad Recycling handles the jobs other companies won't touch. Licensed, insured, and built for the Northeast.</p>
     <div class="hero-btns">
       <a href="#quote" class="btn btn-gold">Get a Free Quote</a>
       <a href="#services" class="btn btn-outline">Our Services</a>
@@ -158,26 +158,27 @@
         <div class="scard-num">02</div>
         <span class="scard-icon">🏭</span>
         <div class="scard-title">Industrial Cleanouts & Demolition</div>
-        <p class="scard-desc">We handle all commercial and industrial cleanout and demolition work, at any scale. Our focus is commercial and interior demolition, but we also service exterior demolition. Warehouse teardowns, manufacturing plant decommissioning, trailer removal, and heavy equipment removal. Built for the big jobs.</p>
+        <p class="scard-desc">Our main focus is machinery and equipment demolition and disposal — getting heavy equipment off your property safely and fast. We also handle full commercial and industrial cleanouts, interior/exterior demolition, warehouse teardowns, and trailer removal.</p>
         <div class="scard-tags">
+          <span class="stag">Equipment Disposal</span>
           <span class="stag">Warehouse Cleanouts</span>
           <span class="stag">Interior Demo</span>
           <span class="stag">Exterior Demo</span>
           <span class="stag">Trailer Removal</span>
-          <span class="stag">Heavy Equipment</span>
         </div>
       </div>
       <div class="scard">
         <div class="scard-num">03</div>
         <span class="scard-icon">🔩</span>
-        <div class="scard-title">Machinery Rigging & Relocation</div>
-        <p class="scard-desc">Safe and efficient rigging of heavy machinery for relocation, removal, or disposal. We handle the heavy iron others walk away from — and we recycle and process scrap metal responsibly.</p>
+        <div class="scard-title">Machinery Rigging</div>
+        <p class="scard-desc">Safe and efficient rigging of heavy machinery for removal and disposal. We handle the heavy iron others walk away from — and we recycle and process scrap metal responsibly.</p>
         <div class="scard-tags">
           <span class="stag">Heavy Rigging</span>
-          <span class="stag">Machine Relocation</span>
+          <span class="stag">Equipment Removal</span>
           <span class="stag">Scrap Processing</span>
           <span class="stag">Responsible Recycling</span>
         </div>
+        <p style="font-size:13px;color:var(--grey);margin-top:10px"><strong>Note:</strong> We do not offer machinery relocation — rigging services are for removal and disposal only.</p>
       </div>
       <div class="scard">
         <div class="scard-num">04</div>
@@ -190,14 +191,16 @@
           <span class="stag">Post-Demo Salvage</span>
           <span class="stag">Landfill Diversion</span>
         </div>
+        <p style="font-size:13px;color:var(--grey);margin-top:10px"><strong>Note:</strong> We recycle far more than scrap metal — wood, concrete, plastics, and a wide range of other job-site materials are diverted from landfills wherever possible.</p>
       </div>
       <div class="scard" style="grid-column:span 2">
         <div class="scard-num">05</div>
         <span class="scard-icon">📦</span>
         <div class="scard-title">Roll-Off Container Services</div>
-        <p class="scard-desc">We provide roll-off containers of any size — for cleanouts, demolition debris, construction waste, or ongoing commercial needs. Drop-off, swap-out, and pickup scheduled around your job.</p>
+        <p class="scard-desc">We provide roll-off containers of any size — for cleanouts, demolition debris, construction waste, or ongoing commercial needs. We also service a high volume of roll-offs for industrial trash removal across a wide variety of material types. Drop-off, swap-out, and pickup scheduled around your job.</p>
         <div class="scard-tags">
           <span class="stag">Any Container Size</span>
+          <span class="stag">Industrial Trash Removal</span>
           <span class="stag">Construction Debris</span>
           <span class="stag">Commercial & Residential</span>
           <span class="stag">Flexible Scheduling</span>
@@ -377,7 +380,7 @@
         </div>
       </div>
       <div class="rev d1">
-        <form action="https://api.web3forms.com/submit" method="POST" class="qform" id="quote-form">
+        <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="qform" id="quote-form">
           <input type="hidden" name="access_key" value="c89941c0-8929-4cd9-8733-2366c16bb9ac">
           <input type="hidden" name="subject" value="New Quote Request — Ironclad Recycling">
           <input type="hidden" name="redirect" value="false">
@@ -439,6 +442,11 @@
           <div class="form-group">
             <label>Job Description</label>
             <textarea name="description" placeholder="Briefly describe the job — size of space, type of materials, any special equipment or access requirements..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Upload a Photo (optional)</label>
+            <input type="file" name="attachment" accept="image/*" capture="environment">
+            <p style="font-size:12px;color:var(--grey);margin-top:6px">A photo helps us give a faster, more accurate evaluation. Max file size 5MB.</p>
           </div>
           <button class="form-submit" type="submit">Submit Quote Request →</button>
           <p class="form-note">We'll contact you within 24 hours to schedule your free on-site evaluation.</p>
