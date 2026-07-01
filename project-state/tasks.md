@@ -48,12 +48,12 @@
 
 ---
 
-## Phase E — Domain + Hosting ⬜ NOT STARTED
+## Phase E — Domain + Hosting ⬜ PARTIAL
 
-- [ ] Register domain at Namecheap (likely `ironcladrecyclingllc.com`, ~$9/yr)
-- [ ] Create Netlify account (sign up with GitHub, free)
-- [ ] Connect repo to Netlify → set publish directory to `site`
-- [ ] Deploy — confirm site goes live on a `.netlify.app` URL
+- [x] Create Netlify account (taygans netify)
+- [x] Connect repo to Netlify → publish directory `site`
+- [x] Site live at `ironclad-recycling.netlify.app` — auto-deploys on every git push
+- [ ] Register custom domain at Namecheap (likely `ironcladrecyclingllc.com`, ~$9/yr) — needs client approval
 - [ ] Connect custom domain from Namecheap to Netlify
 - [ ] Confirm SSL (`https://`) is active — padlock shows in browser
 - [ ] Log all accounts in `docs/accounts.md` (no passwords)
