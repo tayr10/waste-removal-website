@@ -60,7 +60,7 @@
 
 ---
 
-## Phase F — SEO & Analytics ⬜ PARTIAL
+## Phase F — SEO & Analytics ✅ DONE (one item to revisit after custom domain)
 
 - [x] `<title>` and `<meta name="description">` verified — accurate and keyword-rich
 - [x] Open Graph tags added — links preview correctly on Facebook, iMessage, etc.
@@ -68,9 +68,9 @@
 - [x] `site/sitemap.xml` created (uses placeholder domain `ironcladrecyclingllc.com` — update after Phase E)
 - [x] `site/robots.txt` created
 - [x] NAP verified — Name and Phone consistent across all pages (no physical address, service-area only)
-- [ ] Create Google Analytics 4 property → get Measurement ID (G-XXXXXXXXXX) → paste script into `<head>` of all pages
-- [ ] Set up Google Search Console → verify ownership → submit sitemap URL
-- [ ] Update `sitemap.xml` and `robots.txt` domain once custom domain is live
+- [x] Create Google Analytics 4 property → Measurement ID `G-ZHTPZCSDN9` → script added to all three pages
+- [x] Set up Google Search Console → verified via GA4 → sitemap submitted
+- [ ] Update `sitemap.xml`, `robots.txt`, GA4 stream URL, and OG tags once custom domain is live
 
 ---
 
