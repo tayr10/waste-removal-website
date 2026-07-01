@@ -60,14 +60,17 @@
 
 ---
 
-## Phase F — SEO & Analytics ⬜ NOT STARTED
+## Phase F — SEO & Analytics ⬜ PARTIAL
 
-- [ ] Verify `<title>` and `<meta name="description">` in index.html are accurate and keyword-rich
-- [ ] Set up Google Analytics 4 — copy tracking script into `<head>`
-- [ ] Set up Google Search Console — verify ownership
-- [ ] Generate `site/sitemap.xml` and submit to Search Console
-- [ ] Verify NAP (Name, Address, Phone) is identical on site and all listings
-- [ ] Commit: `Phase F: Analytics script added, sitemap created`
+- [x] `<title>` and `<meta name="description">` verified — accurate and keyword-rich
+- [x] Open Graph tags added — links preview correctly on Facebook, iMessage, etc.
+- [x] JSON-LD LocalBusiness structured data added — helps Google understand the business
+- [x] `site/sitemap.xml` created (uses placeholder domain `ironcladrecyclingllc.com` — update after Phase E)
+- [x] `site/robots.txt` created
+- [x] NAP verified — Name and Phone consistent across all pages (no physical address, service-area only)
+- [ ] Create Google Analytics 4 property → get Measurement ID (G-XXXXXXXXXX) → paste script into `<head>` of all pages
+- [ ] Set up Google Search Console → verify ownership → submit sitemap URL
+- [ ] Update `sitemap.xml` and `robots.txt` domain once custom domain is live
 
 ---
 
