@@ -38,13 +38,13 @@
 
 ---
 
-## Phase D — Legal pages ⬜ NOT STARTED
+## Phase D — Legal pages ✅ DONE
 
-- [ ] Generate privacy policy → save as `legal/privacy-policy.html`
-- [ ] Generate terms of service → save as `legal/terms-of-service.html`
-- [ ] Add footer links in `site/index.html` pointing to both pages
-- [ ] Verify the links work in Live Server
-- [ ] Commit: `Phase D: Privacy policy and terms of service added`
+- [x] Generate privacy policy → saved as `site/privacy-policy.html`
+- [x] Generate terms of service → saved as `site/terms-of-service.html`
+- [x] Footer links in `site/index.html` point to both pages
+- [x] Both pages use site fonts and CSS variables from `style.css`
+- [x] Committed in Phase B+D commit (008ead3)
 
 ---
 

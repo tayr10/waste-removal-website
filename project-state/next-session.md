@@ -7,18 +7,17 @@
 
 ## Pick up here
 
-**Phase D — Legal pages** (Phase C is blocked waiting on client photos/content)
+**Phase E — Domain + Hosting** (once Phase C unblocks — need client photos first)
 
-Generate Privacy Policy and Terms of Service, save them to `legal/`, and link
-them from the footer in `site/index.html`.
+Or: continue waiting on client and skip ahead to Phase F (SEO/Analytics prep) in the meantime.
 
-See `tasks.md` → Phase D for the full checklist.
-See `README.md` → Phase D for the exact prompts to use with Claude.
+See `tasks.md` → Phase E for the full checklist.
 
 ## Context
 
 - Phase A ✅ complete
 - Phase B ✅ complete — CSS in `site/style.css`, JS in `site/main.js`, HTML down to 480 lines
 - Phase C ⬜ blocked — waiting on client for real photos and confirmed service details
-- Phase D ⬜ ready to start — no blockers, can run in parallel with waiting on client
-- Phase E onward depends on Phase D and C both being done
+- Phase D ✅ complete — `site/privacy-policy.html` + `site/terms-of-service.html` live, footer linked
+- Phase E ⬜ ready — register domain (Namecheap), deploy to Netlify, connect domain, confirm SSL
+- Phase F onward depends on Phase E
