@@ -82,18 +82,20 @@
 - [~] Contact form submits and email is received — submits with "sent" confirmation;
       **email delivery unconfirmed** — ask client to check the inbox for the test message
 - [x] Every nav link works — nothing 404s
-- [ ] PageSpeed Insights score ≥ 80 on mobile — scored **68** on 2026-08-13
-      (SEO 100, Best Practices 100, Accessibility 73). Logo compressed 346K → 56K;
-      **re-test after the Netlify deploy lands**
+- [x] PageSpeed Insights score ≥ 80 on mobile — **80** after compressing the logo
+      346K → 56K (was 68 before). SEO 100, Best Practices 100, Accessibility 73.
+      Right on the threshold — scores vary a few points run to run, so treat it as
+      the floor, not headroom.
 - [x] No Lorem ipsum anywhere — grepped, clean
 - [x] Privacy Policy and Terms footer links work
 - [x] Logo loads on all pages
 
 ### Phase G follow-ups
-- [ ] Confirm contact-form email actually arrives (needs client inbox access)
-- [ ] Re-run PageSpeed after logo compression — target ≥ 80 mobile
+- [ ] Confirm contact-form email actually arrives (needs client inbox access) — **last open blocker**
 - [ ] Accessibility scored 73 — worth a look, not a launch blocker
 - [ ] Re-run this whole checklist against the custom domain once Phase E completes
+- [ ] Compress every client photo before it enters `site/images/` — PageSpeed is at 80
+      exactly, so uncompressed photos will push it back under
 
 ---
 

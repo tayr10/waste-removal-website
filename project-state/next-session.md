@@ -7,15 +7,11 @@
 
 ## Pick up here
 
-**First thing:** re-run PageSpeed Insights on `https://ironclad-recycling.netlify.app`
-(mobile). Last score was **68**; the logo was compressed 346K → 56K and pushed on
-2026-08-13, so the new score should be higher. Click "Analyze" fresh — don't reload
-a cached result page. Target is ≥ 80.
+**Phase G is effectively done** — PageSpeed hit 80 on mobile after the logo compression
+(2026-08-13). Only open item is confirming the contact-form email actually arrives, which
+needs the client's inbox.
 
-If it's still under 80, the next things to look at are render-blocking CSS and the
-Google Fonts load — both show up in the PageSpeed "Opportunities" section.
-
-**Then, waiting on client:**
+**Waiting on client:**
 1. Register domain at Namecheap → connect to Netlify (Phase E)
 2. Update `sitemap.xml`, `robots.txt`, OG tags, and GA4 stream URL to real domain
    — **all four together**, see decisions.md
@@ -30,7 +26,8 @@ Google Fonts load — both show up in the PageSpeed "Opportunities" section.
 - Phase D ✅ complete — `site/privacy-policy.html` + `site/terms-of-service.html` live, footer linked
 - Phase E ⬜ partial — live at `ironclad-recycling.netlify.app`; still need custom domain (client approval + ~$9)
 - Phase F ✅ complete — GA4 (`G-ZHTPZCSDN9`), Search Console, sitemap, robots.txt, OG tags, structured data all live
-- Phase G ⬜ in progress — 7 of 9 checks pass; PageSpeed pending re-test, form email unconfirmed
+- Phase G ✅ 8 of 9 checks pass — only the contact-form email delivery is unconfirmed
+- Phase H ⬜ not started — launch, announce, Google Business Profile
 
 ## Heads up
 
