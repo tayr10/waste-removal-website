@@ -74,17 +74,26 @@
 
 ---
 
-## Phase G — Pre-launch testing ⬜ NOT STARTED
+## Phase G — Pre-launch testing ⬜ IN PROGRESS (tested against Netlify staging)
 
-- [ ] Site loads at live domain without errors
-- [ ] `https://` padlock shows — no warnings
-- [ ] Click-to-call works on a real phone
-- [ ] Contact form submits and email is received
-- [ ] Every nav link works — nothing 404s
-- [ ] PageSpeed Insights score ≥ 80 on mobile
-- [ ] No Lorem ipsum anywhere
-- [ ] Privacy Policy and Terms footer links work
-- [ ] Logo loads on all pages
+- [x] Site loads at live domain without errors — loads clean at `ironclad-recycling.netlify.app`
+- [x] `https://` padlock shows — no warnings (URL confirmed `https://`; Netlify auto-SSL)
+- [x] Click-to-call works on a real phone — link fires the dialer
+- [~] Contact form submits and email is received — submits with "sent" confirmation;
+      **email delivery unconfirmed** — ask client to check the inbox for the test message
+- [x] Every nav link works — nothing 404s
+- [ ] PageSpeed Insights score ≥ 80 on mobile — scored **68** on 2026-08-13
+      (SEO 100, Best Practices 100, Accessibility 73). Logo compressed 346K → 56K;
+      **re-test after the Netlify deploy lands**
+- [x] No Lorem ipsum anywhere — grepped, clean
+- [x] Privacy Policy and Terms footer links work
+- [x] Logo loads on all pages
+
+### Phase G follow-ups
+- [ ] Confirm contact-form email actually arrives (needs client inbox access)
+- [ ] Re-run PageSpeed after logo compression — target ≥ 80 mobile
+- [ ] Accessibility scored 73 — worth a look, not a launch blocker
+- [ ] Re-run this whole checklist against the custom domain once Phase E completes
 
 ---
 

@@ -53,3 +53,30 @@ adjustment once hosted depending on server folder structure — verify in Phase 
 **Why:** Two folders with the same content creates confusion about which is the
 "real" version. Having a single source of truth (`site/`) prevents edits from
 being made in the wrong place.
+
+---
+
+## All URLs stay on the real domain until the domain is live
+
+**Date:** Phase G (2026-08-13)
+**Decision:** `sitemap.xml`, `robots.txt`, OG tags, and JSON-LD all point at
+`ironcladrecyclingllc.com` — the not-yet-registered custom domain. Reverted an earlier
+commit (`75f03d7`) that switched *only* `sitemap.xml` to the Netlify staging URL.
+**Why:** Changing one file left the others disagreeing — `robots.txt` advertised a sitemap
+at the custom domain while the sitemap itself claimed the pages lived on Netlify. Search
+engines follow those cross-references, so a partial switch is worse than no switch.
+These URLs are a set: change all of them together or none of them.
+**When to revisit:** Phase E — once the custom domain resolves, update all four in one commit.
+
+---
+
+## Compress images before they ship
+
+**Date:** Phase G (2026-08-13)
+**Decision:** Compressed `ironclad-logo.JPG` from 346 KB to 56 KB using macOS `sips`
+(resized 1122px → 560px wide, JPEG quality 50).
+**Why:** PageSpeed mobile scored 68 (target ≥80) with Largest Contentful Paint at 5.1s.
+The logo renders four times on the page, so its weight was paid repeatedly. Source images
+come out of cameras and design tools at print quality; screens need a fraction of that.
+**Rule going forward:** any image added to `site/` gets compressed first. Photos from the
+client (Phase C) go through the same treatment before they land in `site/images/`.
