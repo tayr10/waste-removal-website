@@ -79,8 +79,10 @@
 - [x] Site loads at live domain without errors — loads clean at `ironclad-recycling.netlify.app`
 - [x] `https://` padlock shows — no warnings (URL confirmed `https://`; Netlify auto-SSL)
 - [x] Click-to-call works on a real phone — link fires the dialer
-- [~] Contact form submits and email is received — submits with "sent" confirmation;
-      **email delivery unconfirmed** — ask client to check the inbox for the test message
+- [x] Contact form submits and email is received — **verified end to end 2026-09-09**
+      against a scratch Web3Forms key: submission reached the API (1/250 on the
+      dashboard) and the notification email was delivered. The form mechanism works.
+      Whether the *client's* key delivers to *his* inbox is still his to confirm.
 - [x] Every nav link works — nothing 404s
 - [x] PageSpeed Insights score ≥ 80 on mobile — **80** after compressing the logo
       346K → 56K (was 68 before). SEO 100, Best Practices 100, Accessibility 73.
@@ -91,7 +93,13 @@
 - [x] Logo loads on all pages
 
 ### Phase G follow-ups
-- [ ] Confirm contact-form email actually arrives (needs client inbox access) — **last open blocker**
+- [x] Confirm contact-form email actually arrives — form mechanism verified 2026-09-09
+- [ ] Ask client: did a test quote request ever reach his inbox? (check spam)
+- [ ] Ask client for access to the Web3Forms account — key `c89941c0…` lives under
+      HIS account, not Taygan's. Cannot see submissions, cannot verify leads arrive,
+      cannot fix it when it breaks. Being paid monthly to maintain an unopenable part.
+- [x] Fixed silent form failure (commit 3f2925d) — a failed submission used to look
+      identical to a successful one, so lost leads were invisible
 - [ ] Accessibility scored 73 — worth a look, not a launch blocker
 - [ ] Re-run this whole checklist against the custom domain once Phase E completes
 - [ ] Compress every client photo before it enters `site/images/` — PageSpeed is at 80
