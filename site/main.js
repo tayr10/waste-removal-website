@@ -18,15 +18,23 @@ if(qform){
     const btn=qform.querySelector('.form-submit');
     btn.textContent='Sending...';
     btn.disabled=true;
-    const res=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(qform)});
-    if(res.ok){
-      document.getElementById('form-success').style.display='block';
-      qform.reset();
-      qform.querySelector('.qform-title').scrollIntoView({behavior:'smooth',block:'nearest'});
-    } else {
-      btn.textContent='Something went wrong — please call us at 508-769-2282';
+    try{
+      const res=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(qform)});
+      const data=await res.json();
+      if(res.ok&&data.success){
+        document.getElementById('form-success').style.display='block';
+        qform.reset();
+        qform.querySelector('.qform-title').scrollIntoView({behavior:'smooth',block:'nearest'});
+        btn.textContent='Submit Quote Request →';
+      } else {
+        btn.textContent='Something went wrong — please call 508-769-2282';
+        console.error('Web3Forms rejected:',data);
+      }
+    } catch(err){
+      btn.textContent='Something went wrong — please call 508-769-2282';
+      console.error('Network error:',err);
+    } finally {
+      btn.disabled=false;
     }
-    btn.textContent='Submit Quote Request →';
-    btn.disabled=false;
   });
 }
