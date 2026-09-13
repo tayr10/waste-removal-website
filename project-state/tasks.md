@@ -48,14 +48,14 @@
 
 ---
 
-## Phase E — Domain + Hosting ⬜ PARTIAL
+## Phase E — Domain + Hosting ✅ DONE (2026-09-12)
 
 - [x] Create Netlify account (taygans netify)
 - [x] Connect repo to Netlify → publish directory `site`
 - [x] Site live at `ironclad-recycling.netlify.app` — auto-deploys on every git push
-- [ ] Register custom domain at Namecheap (likely `ironcladrecyclingllc.com`, ~$9/yr) — needs client approval
-- [ ] Connect custom domain from Namecheap to Netlify
-- [ ] Confirm SSL (`https://`) is active — padlock shows in browser
+- [x] Registered `ironcladrecyclingllc.com` at Namecheap 2026-09-12 — $11.48 first year, renews ~$15, auto-renew ON, Domain Privacy ON. Account in Taygan's mother's name (registrar requires 18+); client paid cash.
+- [x] Connected: ALIAS `@` → `apex-loadbalancer.netlify.com`, CNAME `www` → Netlify. `www` redirects to bare domain.
+- [x] SSL active — Let's Encrypt via Netlify, provisioned ~90s after DNS verified
 - [ ] Log all accounts in `docs/accounts.md` (no passwords)
 
 ---
@@ -70,7 +70,9 @@
 - [x] NAP verified — Name and Phone consistent across all pages (no physical address, service-area only)
 - [x] Create Google Analytics 4 property → Measurement ID `G-ZHTPZCSDN9` → script added to all three pages
 - [x] Set up Google Search Console → verified via GA4 → sitemap submitted
-- [ ] Update `sitemap.xml`, `robots.txt`, GA4 stream URL, and OG tags once custom domain is live
+- [x] `sitemap.xml`, `robots.txt`, OG tags already pointed at the real domain — zero code changes needed
+- [ ] GA4 stream URL → `https://ironcladrecyclingllc.com`
+- [ ] Search Console → add `ironcladrecyclingllc.com` as a new property, submit sitemap
 
 ---
 

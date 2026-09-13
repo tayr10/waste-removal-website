@@ -7,25 +7,13 @@
 
 ## Pick up here
 
-**The site is live and complete at `ironclad-recycling.netlify.app`** — photos in,
-form verified, all pushed to `main` (2026-09-12). The client can use it today.
+**The site is LIVE at `https://ironcladrecyclingllc.com`** (2026-09-12). Domain
+registered, DNS connected, SSL active, `www` redirects. Phases A–G complete.
 
-**The only thing left is the custom domain, and it needs Mom.** `ironcladrecyclingllc.com`
-is confirmed available. Registrars require the account holder to be 18, so the Namecheap
-account goes in her name, her email, her card — Taygan does all the typing, she just
-needs to know and say yes. The client already handed over the money.
-
-> *"Can I use your name and card to register a website domain? It's $15 a year,
-> the client already gave me the money, and I handle everything after."*
-
-Once she says yes, in this order:
-1. Namecheap (her account) → buy `ironcladrecyclingllc.com` → **auto-renew ON**
-2. Netlify → Domain management → Add domain → follow the DNS instructions it gives
-3. Confirm the URL starts with `https://`
-4. GA4 stream URL and a new Search Console property → point at the real domain
-5. `git tag v1.0-launch && git push --tags`
-
-**Zero code changes needed** — all 8 domain references already say `ironcladrecyclingllc.com`.
+Two small follow-ups, then Phase H (launch tasks):
+1. GA4 → Admin → Data Streams → change the stream URL to `https://ironcladrecyclingllc.com`
+2. Search Console → add `ironcladrecyclingllc.com` as a Domain property → submit sitemap
+3. `git tag v1.0-launch && git push --tags`
 
 ## Two things to ask the Ironclad owner
 

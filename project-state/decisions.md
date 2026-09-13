@@ -80,3 +80,21 @@ The logo renders four times on the page, so its weight was paid repeatedly. Sour
 come out of cameras and design tools at print quality; screens need a fraction of that.
 **Rule going forward:** any image added to `site/` gets compressed first. Photos from the
 client (Phase C) go through the same treatment before they land in `site/images/`.
+
+---
+
+## Domain registered under a parent's account, not the client's or Taygan's
+
+**Date:** 2026-09-12
+**Decision:** `ironcladrecyclingllc.com` is registered at Namecheap in Taygan's mother's
+account — her name, email, and card. Registrant Company Name is Ironclad Recycling LLC.
+The client reimbursed the cost in cash. Domain Privacy on; auto-renew on.
+**Why:** The client asked Taygan to handle the domain and pay up front. Registrars require
+account holders to be 18, so the account could not be in Taygan's name — a minor's account
+can be closed, taking the domain (and the client's site) with it. The client was not
+available to register it himself. An adult in the household was the workable path.
+**Trade-off accepted:** the client's business domain lives in someone else's account. That
+is fine while the arrangement is friendly, and contact details can be changed any time.
+**When to revisit:** if the client ever wants ownership on paper, Namecheap supports
+transferring a domain between accounts for free. Also swap the registrant address to the
+business's once the client provides it.
