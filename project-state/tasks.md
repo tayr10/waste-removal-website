@@ -24,16 +24,16 @@
 
 ---
 
-## Phase C — Real photos + content verified ⬜ DECISION NEEDED (client will not send photos)
+## Phase C — Real photos + content verified ✅ DONE (2026-09-12 — client sent 3 photos)
 
 - [ ] Confirm all services offered and exact service area
 - [ ] Confirm phone number and email are correct everywhere
 - [ ] Confirm business hours and address (or service-area-only)
-- [ ] Client provides 10–20 real job photos
-- [ ] Compress photos at tinypng.com → save to `assets/optimized/`
-- [ ] Copy optimized photos into `site/images/`
-- [ ] Add `<img>` tags in index.html where photos go
-- [ ] Search for and remove any Lorem ipsum or placeholder text
+- [x] Client provided 3 real job photos (2026-09-10) — more can be added the same way
+- [x] Compressed with a small Swift/ImageIO tool (bakes iPhone orientation) → `assets/optimized/`
+- [x] Copied into `site/images/` — 490 KB total, from 11.7 MB
+- [x] Owner photo in hero; two work photos in new `#work` section below the quote form
+- [x] No placeholder text (grepped in Phase G)
 - [ ] Commit: `Phase C: Real photos added, content verified`
 
 ---

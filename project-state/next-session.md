@@ -7,23 +7,25 @@
 
 ## Pick up here
 
-**Everything is ready except one conversation.** The domain
-`ironcladrecyclingllc.com` is confirmed available, and all 8 domain references in
-the code already point at it — so there are **zero file changes** needed when it
-goes live. Past-you picked the placeholder well.
+**The site is live and complete at `ironclad-recycling.netlify.app`** — photos in,
+form verified, all pushed to `main` (2026-09-12). The client can use it today.
 
-**The one blocker: ask Mom.** Registrars require the account holder to be 18, so
-the Namecheap account needs a parent's name and card. The client already handed
-over the money for it. The ask:
+**The only thing left is the custom domain, and it needs Mom.** `ironcladrecyclingllc.com`
+is confirmed available. Registrars require the account holder to be 18, so the Namecheap
+account goes in her name, her email, her card — Taygan does all the typing, she just
+needs to know and say yes. The client already handed over the money.
 
 > *"Can I use your name and card to register a website domain? It's $15 a year,
 > the client already gave me the money, and I handle everything after."*
 
-Once she says yes: register the name, point it at Netlify, confirm SSL. Then two
-settings that live in Google, not in the code — GA4 stream URL, and a new Search
-Console property for the real domain.
+Once she says yes, in this order:
+1. Namecheap (her account) → buy `ironcladrecyclingllc.com` → **auto-renew ON**
+2. Netlify → Domain management → Add domain → follow the DNS instructions it gives
+3. Confirm the URL starts with `https://`
+4. GA4 stream URL and a new Search Console property → point at the real domain
+5. `git tag v1.0-launch && git push --tags`
 
-**Turn auto-renew ON.** Missed renewals are the most common way small sites die.
+**Zero code changes needed** — all 8 domain references already say `ironcladrecyclingllc.com`.
 
 ## Two things to ask the Ironclad owner
 
@@ -66,7 +68,13 @@ the Netlify staging URL while `robots.txt` and `index.html` still pointed at the
 custom domain. That was reverted in `bdc3421`. If a tool suggests changing one
 URL, check whether the others need to move with it.
 
-## Unpushed
+## What happened 2026-09-10 → 09-12
 
-Three commits on `agents/waste-removal-website-status` are not on `main`:
-`2cc2be7`, `a14ef0d`, `3f2925d`.
+Client sent three iPhone photos. Converted HEIC → JPEG, orientation baked in,
+11.7 MB → ~490 KB. Owner photo in the hero (arch shape, offset gold frame, first
+thing on mobile); two work photos in a new "On the Job" section between the quote
+form and the CTA. Captions deliberately left out — Taygan couldn't verify who or what
+was pictured and didn't want wrong claims on the client's site. Raw HEICs are
+gitignored. Also fixed hero stat 5 → 6 states.
+
+Everything is pushed and on `main`. Nothing unpushed.
