@@ -57,6 +57,18 @@ the Netlify staging URL while `robots.txt` and `index.html` still pointed at the
 custom domain. That was reverted in `bdc3421`. If a tool suggests changing one
 URL, check whether the others need to move with it.
 
+## Client corrections after launch (2026-09-12, same night)
+
+He read his own site and sent three fixes — all shipped:
+- Service area is **New York, not New Jersey** (12 references, 3 files)
+- Real email is **ironcladrecycling@gmail.com** — `info@ironcladrecycling.com` was a
+  placeholder on a domain he doesn't own; the mobile "Email Us" button was dead
+- Phone number showed blue on iPhone — it was plain text, iOS auto-linked it. Now a
+  real link + `format-detection` meta so it can't recur. Also "five states" → six.
+
+Lesson recorded: facts that live in multiple places drift. Always grep `site/` for
+every occurrence before calling a change done.
+
 ## What happened 2026-09-10 → 09-12
 
 Client sent three iPhone photos. Converted HEIC → JPEG, orientation baked in,
