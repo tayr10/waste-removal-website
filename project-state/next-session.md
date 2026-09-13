@@ -10,10 +10,11 @@
 **The site is LIVE at `https://ironcladrecyclingllc.com`** (2026-09-12). Domain
 registered, DNS connected, SSL active, `www` redirects. Phases A–G complete.
 
-Two small follow-ups, then Phase H (launch tasks):
-1. GA4 → Admin → Data Streams → change the stream URL to `https://ironcladrecyclingllc.com`
-2. Search Console → add `ironcladrecyclingllc.com` as a Domain property → submit sitemap
-3. `git tag v1.0-launch && git push --tags`
+Search Console done, `v1.0-launch` tagged. What's left is Phase H marketing:
+1. GA4 → Admin → Data Streams → change stream URL to `https://ironcladrecyclingllc.com` (cosmetic, 2 min)
+2. Google Business Profile — the client sets this up; it's the biggest local-search win
+3. Client announces on Facebook / Instagram / Nextdoor; asks first customers for reviews
+4. Check Search Console in a few days — pages should show as indexed
 
 ## Two things to ask the Ironclad owner
 

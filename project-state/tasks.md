@@ -72,7 +72,7 @@
 - [x] Set up Google Search Console → verified via GA4 → sitemap submitted
 - [x] `sitemap.xml`, `robots.txt`, OG tags already pointed at the real domain — zero code changes needed
 - [ ] GA4 stream URL → `https://ironcladrecyclingllc.com`
-- [ ] Search Console → add `ironcladrecyclingllc.com` as a new property, submit sitemap
+- [x] Search Console → `https://ironcladrecyclingllc.com/` property added (verified via GA4), sitemap submitted 2026-09-12
 
 ---
 
@@ -109,12 +109,12 @@
 
 ---
 
-## Phase H — Launch ⬜ NOT STARTED
+## Phase H — Launch ⬜ IN PROGRESS — site is live; remaining items are marketing
 
-- [ ] All Phase G boxes checked
-- [ ] Confirm live domain resolves correctly
-- [ ] Submit sitemap in Search Console
+- [x] All Phase G boxes checked
+- [x] Live domain resolves with SSL — 2026-09-12
+- [x] Sitemap submitted for the real domain — 2026-09-12
 - [ ] Announce on Facebook, Instagram, Nextdoor
 - [ ] Text/call first 5 customers — ask for Google review
 - [ ] Set up Google Business Profile
-- [ ] Tag the release: `git tag v1.0-launch && git push --tags`
+- [x] Tagged `v1.0-launch` — 2026-09-12
