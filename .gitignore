@@ -22,3 +22,8 @@ npm-debug.log*
 *.env
 secrets.txt
 passwords.txt
+
+# Raw camera originals — huge, and git keeps them forever.
+# Compressed versions live in assets/optimized/ and site/images/ and ARE committed.
+assets/photos/*
+!assets/photos/.gitkeep
